@@ -1,0 +1,953 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aloft Tallahassee Downtown — Financing Memorandum | Hodges Ward Elliott</title>
+<meta name="description" content="$19.3M ($119,136 per key / 65% LTC) acquisition financing for the 162-key Aloft Tallahassee Downtown — a recently renovated select-service hotel in the heart of Downtown Tallahassee, Florida. Offered by Hodges Ward Elliott." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=Abril+Fatface&display=swap" rel="stylesheet">
+
+<!-- Map library -->
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+
+<style>
+  :root{
+    --ink:#474742;        --ink-rgb:71,71,66;
+    --navy:#363732;       --navy-rgb:54,55,50;
+    --navy-lt:#434139;
+    --blue:#2a2b26;       --blue-mid:#232420;  --blue-lt:#4a4a42;
+    --gold:#bc8f2d;       --gold-lt:#d9b559;   --gold-hover:#cfa63f;
+    --gold-rgb:188,143,45;
+    --stone:#858073;      --stone-rgb:133,128,115;
+    --cream:#ffffff;      --off-white:#ece9e2;  --muted:#a9a396;
+    --divider:rgba(133,128,115,.28);
+    --line:rgba(255,255,255,.08);
+    --font-cormorant:"Cormorant Garamond",Georgia,serif;
+    --font-jost:"Poppins",system-ui,sans-serif;
+    --font-abril:"Abril Fatface",Georgia,serif;
+    --pad:clamp(24px,7vw,100px);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--cream);
+       font-family:var(--font-jost);font-weight:300;line-height:1.6;
+       -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+
+  /* Layout helpers */
+  .section{padding:clamp(64px,10vh,120px) var(--pad)}
+  .wrap{max-width:1280px;margin:0 auto}
+  .bleed{margin-left:calc(-1*var(--pad));margin-right:calc(-1*var(--pad))}
+
+  /* Typography */
+  h1,h2,h3{font-family:var(--font-cormorant);font-weight:300;margin:0}
+  .h2{font-size:clamp(29px,3.7vw,48px);line-height:1.08;color:var(--cream);letter-spacing:.005em}
+  .h2 em{font-style:italic;color:var(--gold-lt)}
+  .eyebrow{font-size:11px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-lt);
+           display:inline-flex;align-items:center;gap:12px;margin-bottom:22px}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);display:inline-block}
+  .lead{font-size:15.5px;color:var(--muted);line-height:1.85}
+  .lead strong,.lead b,.em{font-style:normal;font-weight:600;color:#fff}
+  p{margin:0 0 18px}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;font-family:var(--font-jost);
+       font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+       border-radius:1px;transition:transform .25s,background .25s,color .25s,border-color .25s;cursor:pointer;border:none}
+  .btn:hover{transform:translateY(-2px)}
+  /* Equal-width buttons within a button row */
+  .btnrow .btn{flex:1 1 220px;white-space:nowrap}
+  .btn-cta{background:var(--gold);color:#0b1420}
+  .btn-cta:hover{background:var(--gold-hover)}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.32)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-lt)}
+  /* Pinned left-edge vertical CTA */
+  .side-cta{position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:95;
+       writing-mode:vertical-rl;background:var(--gold);color:#0b1420;font-family:var(--font-jost);
+       font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+       padding:22px 12px;text-decoration:none;border-radius:0 4px 4px 0;
+       box-shadow:0 8px 26px rgba(0,0,0,.4);transition:background .25s,padding .25s}
+  .side-cta:hover{background:var(--gold-hover);padding-right:16px}
+  @media(max-width:640px){.side-cta{display:none}}
+
+  /* Nav */
+  .nav{position:fixed;inset:0 0 auto 0;z-index:100;height:70px;display:flex;align-items:center;
+       justify-content:space-between;padding:0 clamp(16px,4vw,72px);
+       background:rgba(var(--ink-rgb),.28);backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);
+       border-bottom:1px solid rgba(255,255,255,.08);
+       transition:background .4s,border-color .4s,backdrop-filter .4s}
+  .nav.scrolled{background:rgba(var(--ink-rgb),.5);backdrop-filter:blur(22px) saturate(1.5);-webkit-backdrop-filter:blur(22px) saturate(1.5);border-bottom:1px solid rgba(255,255,255,.10)}
+  /* When scrolling down the glass bar fades away, but the logo + menu toggle stay accessible */
+  .nav.nav--hidden{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom-color:transparent}
+  .nav .brand img,.nav-toggle{filter:drop-shadow(0 1px 5px rgba(0,0,0,.55))}
+  .nav .brand img{height:30px;width:auto;opacity:.5}
+  /* hamburger */
+  .nav-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;
+      background:transparent;border:none;cursor:pointer;padding:9px;flex-shrink:0}
+  .nav-toggle span{display:block;height:1.5px;width:100%;background:#fff;transition:transform .3s ease,opacity .3s ease}
+  .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  /* dropdown menu */
+  .nav-menu{position:fixed;top:60px;right:clamp(16px,4vw,72px);z-index:99;width:min(300px,86vw);
+      background:rgba(var(--ink-rgb),.98);backdrop-filter:blur(18px);border:1px solid var(--divider);border-radius:4px;
+      display:flex;flex-direction:column;padding:8px 24px 22px;box-shadow:0 30px 70px rgba(0,0,0,.55);
+      transform:translateY(-12px) scale(.98);transform-origin:top right;opacity:0;visibility:hidden;
+      transition:transform .32s ease,opacity .32s ease,visibility .32s}
+  .nav-menu.open{transform:none;opacity:1;visibility:visible}
+  .nav-menu a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+      text-decoration:none;padding:14px 2px;border-bottom:1px solid var(--line);transition:color .2s}
+  .nav-menu a:hover{color:#fff}
+  .nav-menu .navcta{margin-top:18px;padding:14px 20px;background:var(--gold);color:#0b1420;text-align:center;
+      font-weight:600;letter-spacing:.18em;border-radius:1px;border-bottom:none}
+  .nav-menu .navcta:hover{color:#0b1420;background:var(--gold-hover)}
+
+  /* HERO */
+  .hero{position:relative;height:100svh;min-height:660px;overflow:hidden;background:var(--ink)}
+  .hero .bg{position:absolute;inset:0;background:url('assets/img/hero.jpg?v=2') center 88%/cover no-repeat;filter:brightness(1) saturate(1.04)}
+  .hero .grad{position:absolute;inset:0;background:
+      linear-gradient(to bottom,rgba(0,0,0,.30) 0%,rgba(0,0,0,.08) 16%,transparent 40%,transparent 60%,rgba(var(--ink-rgb),.5) 86%,rgba(var(--ink-rgb),.9) 100%)}
+  .hero .frame{display:none}
+  .hero-logo{position:absolute;top:15%;right:clamp(90px,12vw,250px);z-index:4;text-align:right}
+  .hero-logo img{width:clamp(360px,45vw,610px);filter:drop-shadow(0 2px 20px rgba(0,0,0,.5))}
+  .hero-foot{position:absolute;left:0;right:0;bottom:clamp(42px,6.5vh,74px);z-index:4;
+      display:flex;align-items:center;justify-content:center;gap:clamp(16px,3vw,42px);padding:0 clamp(44px,10vw,170px)}
+  .hero-foot .rule{height:1px;background:rgba(var(--stone-rgb),.6);flex:1;max-width:360px}
+  .hero-foot .fm{font-family:var(--font-jost);font-size:clamp(12px,1.5vw,17px);letter-spacing:.52em;
+      text-transform:uppercase;color:var(--off-white);white-space:nowrap;text-indent:.52em;
+      text-shadow:0 1px 12px rgba(0,0,0,.5)}
+  @media(max-width:640px){.hero-foot .rule{max-width:60px}.hero-logo{left:clamp(24px,7vw,52px);text-align:center}}
+  @keyframes scrollPulse{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:.4;transform:scaleY(.6)}}
+
+  /* Overview */
+  .over-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,6vw,88px);align-items:stretch;margin-top:38px}
+  .over-copy{display:flex;flex-direction:column;height:100%}
+  .over-copy .btnrow{margin-top:auto;padding-top:20px}
+  .stats-card{background:transparent;border:none}
+  .stats-card .sc-head{margin-bottom:16px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-lt)}
+  .snap-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+  .snap-card{background:#5f594e;border:1px solid rgba(255,255,255,.10);border-radius:8px;padding:22px 26px;
+      position:relative;overflow:hidden;transition:background .35s ease,box-shadow .35s ease,transform .35s ease}
+  .snap-card:hover{background:#6e6757;transform:translateY(-3px);box-shadow:0 18px 44px rgba(0,0,0,.42);z-index:2}
+  .snap-card .v{font-family:var(--font-jost);font-weight:400;font-size:19px;color:#fff;line-height:1.25}
+  .snap-card .k{font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:9px}
+  .snap-card .d{max-height:0;opacity:0;overflow:hidden;color:rgba(255,255,255,.72);font-size:12px;line-height:1.55;
+      transition:max-height .45s ease,opacity .35s ease,margin-top .35s ease}
+  .snap-card:hover .d{max-height:200px;opacity:1;margin-top:12px}
+  .snap-card.wide{grid-column:1/-1}
+  .snap-note{margin-top:14px;font-size:11px;line-height:1.6;color:var(--muted)}
+  .snap-note sup{color:var(--gold-lt);margin-right:2px}
+  .fnb-list{margin:6px 0 0;padding-left:0;list-style:none;font-size:13px;color:var(--off-white);line-height:1.7}
+  .fnb-list li::before{content:"›";color:var(--gold-lt);margin-right:8px}
+  .btnrow{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+
+  /* Capital stack */
+  .fin-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,3vw,44px);margin-top:40px}
+  .fin-table{background:var(--navy);border:1px solid var(--line)}
+  .fin-table .ft-head{display:flex;justify-content:space-between;align-items:baseline;padding:18px 24px;border-bottom:1px solid var(--divider)}
+  .fin-table .ft-head .t{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-lt)}
+  .fin-table .ft-head .c{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .fin-row{display:grid;grid-template-columns:1fr auto auto;gap:18px;padding:13px 24px;border-bottom:1px solid var(--line);align-items:baseline}
+  .fin-row .lbl{font-size:14px;color:var(--off-white)}
+  .fin-row .sub{padding-left:18px;font-size:12.5px;color:var(--muted)}
+  .fin-row .pct{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
+  .fin-row .amt{font-family:var(--font-jost);font-weight:500;font-size:15.5px;color:#fff;font-variant-numeric:tabular-nums;min-width:120px;text-align:right}
+  .fin-row.total{background:rgba(var(--gold-rgb),.10);border-bottom:none}
+  .fin-row.total .lbl{color:#fff;letter-spacing:.04em}
+  .fin-row.total .amt{color:var(--gold-lt)}
+  .fin-row.indent{background:rgba(255,255,255,.015)}
+
+  .splitbar{display:flex;height:14px;border-radius:2px;overflow:hidden;margin:34px 0 8px;border:1px solid var(--line)}
+  .splitbar span{display:block;height:100%}
+  .splitleg{display:flex;gap:26px;flex-wrap:wrap;font-size:11px;letter-spacing:.1em;color:var(--muted)}
+  .splitleg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:middle}
+
+  .loan-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;margin-top:44px;
+      background:var(--line);border:1px solid var(--line)}
+  .loan-cell{background:var(--navy);padding:22px 24px}
+  .loan-cell .k{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .loan-cell .v{font-family:var(--font-jost);font-weight:500;font-size:clamp(20px,2.2vw,27px);color:#fff;margin-top:8px;line-height:1.15}
+  .loan-cell .v small{font-size:13px;color:var(--gold-lt);font-family:var(--font-jost);letter-spacing:.04em}
+
+  /* NOI chart */
+  .chart{margin-top:16px;background:var(--navy);border:1px solid var(--line);padding:clamp(24px,3vw,40px)}
+  .chart-legend{display:flex;gap:24px;flex-wrap:wrap;font-size:11px;letter-spacing:.08em;color:var(--muted);margin-bottom:26px}
+  .chart-legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:8px;vertical-align:middle}
+  .bars{display:grid;grid-template-columns:repeat(10,1fr);gap:clamp(4px,1vw,12px);align-items:end;height:300px;position:relative;border-bottom:1px solid var(--divider)}
+  .bar{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:8px;position:relative}
+  .bar .col{width:100%;max-width:52px;border-radius:2px 2px 0 0;position:relative;cursor:pointer;
+      transform:scaleY(0);transform-origin:bottom;transition:transform .9s cubic-bezier(.22,1,.36,1),filter .25s}
+  .chart.in .bars .col{transform:scaleY(1)}
+  .chart.in .bars .bar:nth-child(1) .col{transition-delay:.04s}
+  .chart.in .bars .bar:nth-child(2) .col{transition-delay:.10s}
+  .chart.in .bars .bar:nth-child(3) .col{transition-delay:.16s}
+  .chart.in .bars .bar:nth-child(4) .col{transition-delay:.22s}
+  .chart.in .bars .bar:nth-child(5) .col{transition-delay:.28s}
+  .chart.in .bars .bar:nth-child(6) .col{transition-delay:.34s}
+  .chart.in .bars .bar:nth-child(7) .col{transition-delay:.40s}
+  .chart.in .bars .bar:nth-child(8) .col{transition-delay:.46s}
+  .chart.in .bars .bar:nth-child(9) .col{transition-delay:.52s}
+  .chart.in .bars .bar:nth-child(10) .col{transition-delay:.58s}
+  .chart.in .bars .bar:hover .col{filter:brightness(1.25)}
+  .chart.in .bars .bar.grow .col{animation:barGrow 1.9s cubic-bezier(.16,1,.3,1)}
+  .chart.in .bars .bar.grow .val{animation:valReveal 1.9s cubic-bezier(.16,1,.3,1)}
+  @keyframes barGrow{0%{transform:scaleY(1)}10%{transform:scaleY(0)}100%{transform:scaleY(1)}}
+  @keyframes valReveal{0%{opacity:1;transform:translateY(0)}10%{opacity:0;transform:translateY(14px)}58%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+  .bar:hover .val{color:var(--gold-lt)}
+  .bar .val{font-family:var(--font-jost);font-weight:700;font-size:clamp(11px,1.15vw,15px);color:#fff;white-space:nowrap;transition:color .2s}
+  .bar.hist .col{background:linear-gradient(to top,#57534a,#858073)}
+  .bar.fore .col{background:linear-gradient(to top,#9a7325,var(--gold-lt))}
+  .bar-x{display:grid;grid-template-columns:repeat(10,1fr);gap:clamp(4px,1vw,12px);margin-top:12px}
+  .bar-x div{text-align:center;font-size:10px;letter-spacing:.03em;color:var(--muted);line-height:1.3}
+  .bar-x .yr{color:var(--off-white);font-size:11px}
+  .reno-flag{margin-top:22px;display:inline-flex;align-items:center;gap:10px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+  .reno-flag b{color:var(--gold-lt);font-weight:500}
+
+  .perf-table{margin-top:34px;width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:13px}
+  .perf-scroll{overflow-x:auto;margin-top:34px}
+  .perf-table th,.perf-table td{padding:12px 14px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  .perf-table th:first-child,.perf-table td:first-child{text-align:left;color:var(--off-white);position:sticky;left:0;background:var(--ink)}
+  .perf-table thead th{font-family:var(--font-jost);font-weight:500;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);border-bottom:1px solid var(--divider)}
+  .perf-table thead th.grp{color:var(--muted);font-size:9.5px}
+  .perf-table td{color:var(--off-white)}
+  .perf-table .rowlbl{font-weight:500;color:#fff}
+  .perf-table tbody tr:hover td{background:rgba(255,255,255,.02)}
+  .perf-note{font-size:11px;color:var(--muted);margin-top:14px}
+  .perf-note sup{color:var(--gold-lt)}
+
+  /* ---- Themed capital-stack tables (Sources/Uses, Loan Request, Performance) ---- */
+  .cap-2col{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,4vw,58px);margin-top:40px;align-items:start}
+  .cap-right .cap-sub+.cap-sub{margin-top:34px}
+  .cap-h{display:inline-block;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);
+      padding:9px 18px;margin-bottom:16px;border:1px solid var(--gold);border-radius:2px}
+  @media(max-width:860px){.cap-2col{grid-template-columns:1fr;gap:44px}}
+  .cap-scroll{overflow-x:auto}
+  table.cap{width:100%;border-collapse:collapse;table-layout:fixed;font-variant-numeric:tabular-nums;font-family:var(--font-jost)}
+  table.cap th{padding:12px 12px;font-weight:500;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--muted);border-bottom:1px solid var(--divider);text-align:right;white-space:nowrap}
+  table.cap th:first-child{text-align:left;width:40%}
+  table.cap td{padding:13px 12px;font-size:14px;color:#fff;font-weight:500;border-bottom:1px solid var(--line);
+      text-align:right;white-space:nowrap}
+  table.cap td:first-child{text-align:left;color:var(--off-white);font-weight:400;white-space:normal}
+  table.cap tbody tr:hover td{background:rgba(255,255,255,.03)}
+  table.cap .detail{background:rgba(var(--gold-rgb),.06)}
+  table.cap .detail td{color:var(--muted);font-weight:400}
+  table.cap .detail td:first-child{padding-left:30px}
+  table.cap .total td{border-top:1px solid var(--divider);border-bottom:none;padding-top:15px;font-weight:600;color:var(--gold-lt)}
+  .loanreq{margin-top:-8px}
+  .loanreq .lr-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);transition:background .22s ease}
+  .loanreq .lr-row:last-child{border-bottom:none}
+  .loanreq .lr-row:hover{background:var(--navy-lt)}
+  .loanreq dt,.loanreq dd{display:flex;align-items:center;margin:0;padding:15px 22px;font-family:var(--font-jost);font-size:14px;line-height:1.25}
+  .loanreq dt{font-weight:600;color:var(--off-white)}
+  .loanreq dd{color:#fff;font-weight:500;font-variant-numeric:tabular-nums;justify-content:flex-end;text-align:right}
+  table.perf2{width:100%;min-width:1000px;border-collapse:collapse;table-layout:fixed;font-variant-numeric:tabular-nums;font-family:var(--font-jost)}
+  table.perf2 th,table.perf2 td{padding:11px 8px;font-size:14px;text-align:center;color:var(--off-white)}
+  table.perf2 th:first-child,table.perf2 td:first-child{width:17%;text-align:left}
+  table.perf2 .group-row th{color:var(--gold-lt);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding-bottom:4px;font-weight:600}
+  table.perf2 .year-row th{background:rgba(255,255,255,.05);border-bottom:1px solid var(--divider);font-size:11px;color:var(--muted);font-weight:500;line-height:1.3}
+  table.perf2 .year-row th:first-child{background:transparent}
+  table.perf2 .year-row th:not(:first-child){cursor:pointer;transition:color .2s,background .2s}
+  table.perf2 .year-row th:not(:first-child):hover{color:var(--gold-lt);background:rgba(var(--gold-rgb),.12)}
+  table.perf2 tbody td{border-bottom:1px solid var(--line)}
+  table.perf2 tbody tr:last-child td{border-bottom:none}
+  table.perf2 tbody td:first-child{font-weight:600;color:#fff;padding-right:12px}
+  table.perf2 .forecast-start{border-left:1px solid var(--divider)}
+  table.perf2 tbody tr:hover td{background:rgba(255,255,255,.03)}
+  table.perf2 sup{color:var(--gold-lt)}
+  @media(max-width:640px){
+    .loanreq dt,.loanreq dd{padding:12px 14px;font-size:13px}
+    table.cap th,table.cap td{font-size:12.5px;padding:11px 8px}
+  }
+
+  /* Gallery */
+  .gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:clamp(180px,24vh,300px);gap:4px;margin-top:40px}
+  .gal figure{margin:0;position:relative;overflow:hidden;background:var(--navy-lt)}
+  .gal figure img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+  .gal figure:hover img{transform:scale(1.06)}
+  .gal figure figcaption{position:absolute;left:0;bottom:0;right:0;padding:36px 20px 16px;
+      background:linear-gradient(to top,rgba(0,0,0,.7),transparent);
+      font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .35s}
+  .gal figure:hover figcaption{opacity:1}
+  .gal .big{grid-row:1/3}
+  .gal .tall{grid-row:span 2}
+  @media(max-width:760px){.gal{grid-template-columns:1fr 1fr}.gal .big{grid-row:1/3;grid-column:1/3}.gal .tall{grid-row:auto}}
+
+  /* Highlights */
+  .hl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:44px;background:var(--line);border:1px solid var(--line)}
+  .hl-card{background:var(--navy);padding:40px 36px;transition:background .3s}
+  .hl-card:hover{background:var(--navy-lt)}
+  .hl-card .ic{width:72px;height:72px;margin:0 auto 26px;display:block;opacity:.95}
+  .hl-card h3{font-size:23px;color:#fff;line-height:1.2;margin-bottom:14px}
+  .hl-card p{font-size:14px;color:var(--muted);line-height:1.78;margin:0}
+  .hl-card:nth-last-child(2){grid-column:2}
+  @media(max-width:1040px){.hl-grid{grid-template-columns:repeat(2,1fr)}.hl-card:nth-last-child(2){grid-column:auto}}
+  @media(max-width:560px){.hl-grid{grid-template-columns:1fr}}
+
+  /* Location */
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:start;margin-top:40px}
+  .callouts{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:16px}
+  .callouts li{display:flex;gap:14px;align-items:flex-start;font-size:14.5px;color:var(--off-white);line-height:1.5}
+  .callouts li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);margin-top:8px;flex-shrink:0}
+  .loc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:34px}
+  .loc-stats .ls{background:var(--navy);padding:22px 20px;text-align:center}
+  .loc-stats .ls .v{font-family:var(--font-abril);font-weight:400;font-size:clamp(22px,2.4vw,32px);color:var(--gold-lt);line-height:1.05}
+  .loc-stats .ls .k{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  .market-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:22px}
+  .market-grid figure{margin:0;position:relative;overflow:hidden;aspect-ratio:3/2;background:var(--navy-lt)}
+  .market-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .market-grid figure:hover img{transform:scale(1.06)}
+  .market-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;
+      background:linear-gradient(to top,rgba(0,0,0,.78),transparent);font-size:11px;letter-spacing:.12em;
+      text-transform:uppercase;color:#fff}
+  @media(max-width:700px){.market-grid{grid-template-columns:1fr 1fr}}
+  #demand-map{width:100%;height:100%;min-height:420px;background:#e8eef2;border:1px solid var(--divider)}
+  .pin-dot{width:28px;height:28px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;
+      font-family:var(--font-abril),serif;font-size:13px;box-shadow:0 2px 10px rgba(0,0,0,.45);
+      border:1px solid rgba(255,255,255,.55);transition:transform .25s ease}
+  .genpin.active{z-index:1000 !important}
+  .genpin.active .pin-dot{transform:scale(1.28);animation:pinpulse 1.4s ease-out infinite}
+  @keyframes pinpulse{0%{box-shadow:0 0 0 0 rgba(188,143,45,.6)}70%{box-shadow:0 0 0 18px rgba(188,143,45,0)}100%{box-shadow:0 0 0 0 rgba(188,143,45,0)}}
+  .gen-row.active{background:var(--navy-lt);box-shadow:inset 3px 0 0 var(--gold)}
+  .map-shell{display:grid;grid-template-columns:1.4fr .9fr;gap:2px;margin-top:52px;background:var(--line);border:1px solid var(--line)}
+  .gen-list{background:var(--navy);max-height:520px;overflow-y:auto}
+  .gen-row{display:flex;gap:14px;align-items:baseline;padding:15px 22px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .2s}
+  .gen-row:hover{background:var(--navy-lt)}
+  .gen-row .num{font-family:var(--font-abril);font-size:15px;color:var(--gold-lt);min-width:22px}
+  .gen-row .nm{font-size:14px;color:#fff}
+  .gen-row .nt{font-size:11.5px;color:var(--muted);margin-top:3px}
+  .map-box{background:var(--navy);padding:2px}
+  @media(max-width:820px){.map-shell{grid-template-columns:1fr}.loc-grid{grid-template-columns:1fr}}
+
+  /* Partner sections */
+  .partner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);align-items:center;margin-top:38px}
+  .partner.rev .txt{order:2}
+  .partner.media-r{grid-template-columns:.76fr 1.24fr}
+  .partner.rev.media-l{grid-template-columns:1.24fr .76fr}
+  .logo-chip{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:3px;
+      padding:24px 36px;margin-bottom:28px}
+  .logo-chip img{height:64px;width:auto}
+  .pgrid{display:grid;gap:6px}
+  .pgrid.six{grid-template-columns:1fr 1fr}
+  .pgrid.two{grid-template-columns:1fr}
+  .pgrid.one{grid-template-columns:1fr}
+  .pgrid.three{grid-template-columns:1fr 1fr 1fr}
+  .pgrid figure{margin:0;position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--navy-lt)}
+  .pgrid figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .pgrid figure:hover img{transform:scale(1.05)}
+  .pgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 10px;
+      background:linear-gradient(to top,rgba(0,0,0,.72),transparent);font-size:9.5px;letter-spacing:.14em;
+      text-transform:uppercase;color:#fff}
+  .mgr-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:6px}
+  .mgr-stats .ms{background:var(--navy);padding:22px;text-align:center}
+  .mgr-stats .v{font-family:var(--font-abril);font-weight:400;font-size:clamp(22px,2.4vw,34px);color:var(--gold-lt);line-height:1.05}
+  .mgr-stats .k{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  @media(max-width:820px){.partner,.partner.rev{grid-template-columns:1fr}.partner.rev .txt{order:0}.pgrid.six{grid-template-columns:1fr 1fr}}
+
+  /* Brand */
+  .brand-sec{background:var(--blue);position:relative;overflow:hidden}
+  .brand-sec::after{content:"";position:absolute;inset:0;background:radial-gradient(1000px 600px at 80% -10%,rgba(var(--gold-rgb),.14),transparent 60%);pointer-events:none}
+  .brand-sec .wrap{position:relative;z-index:1}
+  .brand-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:44px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08)}
+  .brand-stats .bs{background:var(--blue);padding:34px 26px;text-align:center}
+  .brand-stats .v{font-family:var(--font-abril);font-weight:400;font-size:clamp(28px,3vw,44px);color:var(--gold-lt);line-height:1.05;letter-spacing:.01em}
+  .brand-stats .k{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:14px}
+  .brand-sec .sec-head{margin-left:auto;margin-right:auto;text-align:center}
+  .brand-sec .eyebrow{justify-content:center}
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;margin-top:52px}
+  .pillar{border-left:none;padding-left:0;text-align:left;padding-bottom:20px;border-bottom:2px solid var(--gold)}
+  .pillar h3{font-size:21px;color:#fff;margin-bottom:10px}
+  .pillar p{font-size:13.5px;color:rgba(255,255,255,.66);line-height:1.7;margin:0}
+  @media(max-width:760px){.brand-stats{grid-template-columns:1fr 1fr}}
+
+  /* CTA */
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(34px,4.5vw,60px);line-height:1.05}
+  .cta h2 em{font-style:italic;color:var(--gold-lt)}
+  .cta p{max-width:52ch;margin:24px auto 0;font-size:15.5px;color:var(--muted);line-height:1.85}
+  .cta .btnrow{justify-content:center;margin:38px auto 0;max-width:660px}
+
+  /* Footer */
+  .footer{position:relative;padding:clamp(96px,15vh,168px) var(--pad) 0;
+      background:linear-gradient(rgba(20,20,18,.68),rgba(14,14,12,.8)),url('assets/img/leaf-bg.jpg');
+      background-attachment:fixed,fixed;background-size:cover,cover;background-position:center,center;background-repeat:no-repeat,no-repeat}
+  .footer .fgrid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:3fr 7fr;gap:clamp(24px,4vw,60px);align-items:center}
+  .footer .flogo{display:flex;align-items:center;justify-content:center;height:100%}
+  .footer .flogo img{width:clamp(104px,11vw,144px);height:auto;display:block}
+  .footer .flogo .tl{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-lt);margin-top:18px}
+  .footer .fhead{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.6);
+      padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.2);margin-bottom:24px}
+  .contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px 48px}
+  .contact .nm{font-size:15px;font-weight:600;color:#fff}
+  .contact .ti{font-size:12.5px;color:rgba(255,255,255,.62);margin-top:4px}
+  .contact .ph{display:block;font-size:12.5px;color:rgba(255,255,255,.7);margin-top:8px;text-decoration:none;letter-spacing:.02em}
+  .contact .em{display:block;font-size:12.5px;color:var(--gold-lt);margin-top:4px;text-decoration:none}
+  .contact .ph:hover,.contact .em:hover{color:#fff}
+  .fnote{max-width:1280px;margin:clamp(72px,10vh,120px) auto 0;padding:30px 0 40px;border-top:1px solid rgba(255,255,255,.12)}
+  .fnote p{font-size:11px;line-height:1.7;color:rgba(255,255,255,.42);margin:0 0 10px}
+  .fbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:11px;color:rgba(255,255,255,.42);padding-bottom:8px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px) scale(.955);transition:opacity .8s ease,transform .9s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{transition:opacity .4s ease;transform:none}}
+
+  .sec-head{max-width:900px}
+  @media(min-width:1120px){.h2{white-space:nowrap}}
+  @media(max-width:820px){
+    .over-grid,.fin-grid{grid-template-columns:1fr}
+    .stat .v{font-size:22px}
+  }
+  .maplibregl-popup-tip{display:none}
+  .maplibregl-popup-content{background:var(--navy);color:#fff;font-family:var(--font-jost);font-size:12px;line-height:1.5;
+      padding:9px 13px;border:1px solid var(--divider);border-radius:3px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+  .maplibregl-popup-content b{color:var(--gold-lt);font-weight:600}
+  .maplibregl-ctrl-attrib{font-size:9px}
+  .maplibregl-ctrl-attrib a{color:var(--muted)}
+</style>
+
+<!-- Deal-specific overrides — Aloft Tallahassee Downtown -->
+<style>
+  /* Hero: dusk exterior + the taller Aloft stacked lockup */
+  .hero .bg{background:url('assets/img/hero.jpg?v=1') center 58%/cover no-repeat}
+  .hero-logo{top:13%;right:clamp(40px,8vw,150px);--logoW:clamp(210px,25vw,370px)}
+  .hero-logo img{width:var(--logoW)}
+  /* Kicker set flush to the width of the lockup's "Tallahassee Downtown" line, whose ink spans
+     4.358%-94.841% of the SVG viewBox. Box = 90.4837% of --logoW, inset 5.1585% from the right.
+     Font-size and tracking are both derived from --logoW so the line stays flush at every
+     viewport: "Acquisition Financing" advances 11.86em in Poppins 400, tracking fills the rest. */
+  .hero-kicker{width:calc(var(--logoW) * .904837);
+      margin:clamp(14px,1.9vh,22px) calc(var(--logoW) * .051585) 0 auto;
+      font-family:var(--font-jost);font-size:calc(var(--logoW) * .0391892);font-weight:400;
+      letter-spacing:.56145em;text-align:left;text-transform:uppercase;white-space:nowrap;
+      color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.85),0 2px 18px rgba(0,0,0,.7)}
+
+  /* Deepen the lower scrim so the metric strip always reads */
+  .hero .grad{background:linear-gradient(to bottom,rgba(0,0,0,.30) 0%,rgba(0,0,0,.08) 16%,
+      transparent 38%,transparent 54%,rgba(var(--ink-rgb),.42) 74%,rgba(var(--ink-rgb),.82) 90%,
+      rgba(var(--ink-rgb),.96) 100%)}
+
+  /* Hero: headline deal metrics along the bottom */
+  .hero-stats{position:absolute;left:0;right:0;bottom:clamp(32px,5.2vh,60px);z-index:4}
+  .hero-stats .hs-rule{height:1px;background:rgba(255,255,255,.26);margin-bottom:clamp(16px,2.4vh,28px)}
+  .hero-stats .hs-row{display:flex;flex-wrap:wrap;align-items:flex-end;
+      gap:clamp(22px,4vw,64px);padding:0 clamp(16px,4vw,72px)}
+  .hero-stats .k{font-size:10.5px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;
+      color:rgba(255,255,255,.72);text-shadow:0 1px 10px rgba(0,0,0,.6)}
+  .hero-stats .v{margin-top:9px;font-family:var(--font-jost);font-weight:400;line-height:1;
+      font-size:clamp(23px,2.8vw,40px);color:#fff;font-variant-numeric:tabular-nums;
+      text-shadow:0 2px 18px rgba(0,0,0,.6)}
+  @media(max-width:640px){
+    .hero-logo{left:0;right:0;text-align:center;top:16%}
+    .hero-logo{--logoW:min(62vw,260px)}
+    .hero-logo img{width:var(--logoW);margin:0 auto}
+    .hero-kicker{margin-left:auto;margin-right:auto}
+    .hero-stats .hs-row{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+    .hero-stats .k{font-size:9px;letter-spacing:.22em}
+  }
+
+  /* Investment Highlights: five cards, the location card running full width */
+  #highlights .hl-grid{grid-template-columns:repeat(2,1fr)}
+  #highlights .hl-card:nth-last-child(2){grid-column:auto}
+  #highlights .hl-card.wide{grid-column:1/-1}
+  /* Headings sit on the same vertical axis as the centred icon; body copy stays ranged left */
+  #highlights .hl-card h3{text-align:center}
+  #highlights .hl-card p+p{margin-top:16px}
+  #highlights .hl-card.wide .txt{column-count:3;column-gap:clamp(28px,3.4vw,52px)}
+  #highlights .hl-card.wide .txt p{margin:0 0 16px}
+  #highlights .hl-card.wide .txt p:last-child{margin-bottom:0}
+  @media(max-width:1040px){#highlights .hl-card.wide .txt{column-count:2}}
+  @media(max-width:700px){#highlights .hl-card.wide .txt{column-count:1}}
+  @media(max-width:760px){#highlights .hl-grid{grid-template-columns:1fr}}
+
+  /* Property Snapshot: paired cards share a row height and the labels sit on a common
+     baseline, so a two-line value (e.g. Management) no longer leaves its neighbour short. */
+  .snap-grid{align-items:stretch}
+  .snap-card{display:flex;flex-direction:column}
+  .snap-card .k{margin-top:auto;padding-top:9px}
+
+  /* Location: four stat tiles instead of six */
+  .loc-stats.four{grid-template-columns:repeat(2,1fr)}
+
+  /* Largest Employers: two-column table */
+  table.cap.emp th:first-child{width:72%}
+
+  /* Market grid: captions carry a short blurb */
+  .market-grid.blurbs{grid-template-columns:repeat(3,1fr)}
+  .market-grid.blurbs figcaption{padding:40px 16px 15px;
+      background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.72) 46%,transparent 100%)}
+  .market-grid.blurbs figcaption .bl{display:block;margin-top:7px;font-size:11.5px;letter-spacing:.01em;
+      text-transform:none;color:rgba(255,255,255,.76);line-height:1.5}
+  @media(max-width:820px){.market-grid.blurbs{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.market-grid.blurbs{grid-template-columns:1fr}}
+
+  /* Footer: stone backdrop */
+  .footer{background:linear-gradient(rgba(20,20,18,.72),rgba(14,14,12,.84)),url('assets/img/stone-bg.jpg')}
+</style>
+
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><img src="assets/logo/hwe-white.svg" alt="Hodges Ward Elliott"></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a href="#opportunity">Introduction</a>
+    <a href="#capital">Capital Stack</a>
+    <a href="#performance">Performance</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#location">Location</a>
+    <a class="navcta" href="#access">Sign CA</a>
+  </nav>
+</header>
+
+<!-- Pinned left-edge CTA -->
+<a class="side-cta" href="#access" aria-label="Sign Confidentiality Agreement">Sign CA</a>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="bg"></div>
+  <div class="grad"></div>
+  <div class="frame"></div>
+  <div class="hero-logo">
+    <img src="assets/logo/aloft-tallahassee-white.svg" alt="Aloft Tallahassee Downtown">
+    <div class="hero-kicker">Acquisition Financing</div>
+  </div>
+  <div class="hero-stats">
+    <div class="hs-rule"></div>
+    <div class="hs-row">
+      <div class="hs"><div class="k">Loan Request</div><div class="v">$19,300,000</div></div>
+      <div class="hs"><div class="k">Keys</div><div class="v">162</div></div>
+      <div class="hs"><div class="k">LTC</div><div class="v">65%</div></div>
+      <div class="hs"><div class="k">In-Place Debt Yield</div><div class="v">12.9%</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="section" id="opportunity" style="background:var(--navy)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="h2">Introduction</h2>
+    </div>
+    <div class="over-grid">
+      <div class="over-copy reveal">
+        <p class="lead">Hodges Ward Elliott (&ldquo;HWE&rdquo;) has been exclusively engaged by Roch Capital (the &ldquo;Sponsor&rdquo; or &ldquo;Borrower&rdquo;) to arrange a $19.3 million ($119,136 per key / 65% LTC) fixed or floating rate loan (the &ldquo;Loan&rdquo;) for the acquisition of the 162-key Aloft Tallahassee Downtown, a recently renovated, select-service hotel located in the heart of Downtown Tallahassee, Florida (the &ldquo;Hotel&rdquo; or &ldquo;Property&rdquo;). The Hotel is optimally situated at 200 North Monroe Street, 0.5 miles from the Florida State Capitol, and within 1-2 miles of Florida State University (&ldquo;FSU&rdquo;) and Florida A&amp;M University (&ldquo;FAMU&rdquo;).</p>
+        <p class="lead">The Sponsor, an experienced and well-capitalized hotel owner with existing interests in seven hotel assets, is acquiring the Hotel for $28 million ($172,840 per key). The Aloft Tallahassee Downtown was originally built in 2009, with current ownership completing a $3.4 million renovation in 2024 focused on the lobby, guest rooms, and public spaces. Given the recent renovation, Marriott is requiring a limited change of ownership PIP estimated to cost $500,000.</p>
+        <p class="lead"><b>As of May 2026, the Hotel generated $2.48 million of T-12 NOI, equating to a 12.9% in-place debt yield at 65% LTC. The combination of a recently renovated Marriott-branded asset, minimal near-term capital requirements, a 12.9% in-place debt yield, and a 65% LTC provides lenders with a conservatively structured financing opportunity backed by durable government and university demand.</b></p>
+        <div class="btnrow">
+          <!-- TODO: replace "#" with the RightSignature template-signer link for Aloft Tallahassee Downtown -->
+          <a class="btn btn-cta" href="#">Sign Confidentiality Agreement</a>
+          <!-- TODO: drop the NDA .docx into assets/ and point href at it, e.g. assets/NDA-Aloft-Tallahassee-Downtown-Financing.docx (add download="…") -->
+          <a class="btn btn-ghost" href="#">Download Confidentiality Agreement</a>
+        </div>
+      </div>
+      <div class="stats-card reveal">
+        <div class="sc-head">Property Snapshot</div>
+        <div class="snap-grid">
+          <div class="snap-card wide"><div class="v" style="font-size:17px">200 North Monroe Street, Tallahassee, FL 32301</div><div class="k">Address</div></div>
+          <div class="snap-card"><div class="v">162</div><div class="k">Rooms</div></div>
+          <div class="snap-card"><div class="v">7</div><div class="k">Floors</div></div>
+          <div class="snap-card"><div class="v">2009</div><div class="k">Year Built</div></div>
+          <div class="snap-card"><div class="v">2024</div><div class="k">Year Renovated</div></div>
+          <div class="snap-card"><div class="v">&plusmn; 0.82 AC</div><div class="k">Land Area</div></div>
+          <div class="snap-card"><div class="v" style="font-size:17px">W XYZ Bar</div><div class="k">F&amp;B Outlets</div></div>
+          <div class="snap-card"><div class="v">2,196 SF</div><div class="k">Hotel Meeting Space</div></div>
+          <div class="snap-card"><div class="v">Fee Simple</div><div class="k">Interest</div></div>
+          <div class="snap-card"><div class="v" style="font-size:16px">Unencumbered / RFP Pending</div><div class="k">Management</div></div>
+          <div class="snap-card"><div class="v">Non-Union</div><div class="k">Labor</div></div>
+          <div class="snap-card wide"><div class="v" style="font-size:17px">Self-Parking $25.00 / Day</div><div class="k">Parking</div></div>
+          <div class="snap-card wide"><div class="v" style="font-size:17px">Fitness Center &middot; Outdoor Pool &middot; Pantry Market</div><div class="k">Amenities</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section" id="gallery" style="background:var(--ink);padding-bottom:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The Property</div>
+      <h2 class="h2">A recently renovated landmark in <em>Downtown Tallahassee</em></h2>
+    </div>
+  </div>
+  <div class="gal bleed reveal">
+    <figure class="big"><img src="assets/img/lobby.jpg" alt="Re:mix lobby lounge"><figcaption>Re:mix Lobby Lounge</figcaption></figure>
+    <figure><img src="assets/img/room.jpg" alt="King guest room"><figcaption>Guest Room</figcaption></figure>
+    <figure><img src="assets/img/wxyz.jpg" alt="W XYZ Bar"><figcaption>W XYZ Bar</figcaption></figure>
+    <figure><img src="assets/img/meeting.jpg" alt="Meeting space set with rounds"><figcaption>Meeting Space</figcaption></figure>
+    <figure><img src="assets/img/pool.jpg" alt="Outdoor pool deck"><figcaption>Outdoor Pool</figcaption></figure>
+  </div>
+</section>
+
+<!-- ============ CAPITAL STACK ============ -->
+<section class="section" id="capital" style="background:var(--navy)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Capital Stack</div>
+      <h2 class="h2">Sources &amp; uses of <em>capital</em></h2>
+    </div>
+
+    <div class="cap-2col reveal">
+      <div class="cap-left">
+        <div class="cap-sub">
+          <div class="cap-h">Loan Request</div>
+          <dl class="loanreq">
+            <div class="lr-row"><dt>Total Loan Amount</dt><dd>$19,300,000</dd></div>
+            <div class="lr-row"><dt>Total Loan Amount Per Key</dt><dd>$119,136</dd></div>
+            <div class="lr-row"><dt>May 2026 T-12</dt><dd>$2,481,335</dd></div>
+            <div class="lr-row"><dt>May 2026 T-12 Debt Yield</dt><dd>12.9%</dd></div>
+            <div class="lr-row"><dt>Term</dt><dd>5+ years</dd></div>
+            <div class="lr-row"><dt>Interest Rate</dt><dd>Best Available Fixed or Floating Rate</dd></div>
+            <div class="lr-row"><dt>Amortization</dt><dd>Maximum Available Interest-Only Term</dd></div>
+            <div class="lr-row"><dt>Prepayment</dt><dd>Best Available</dd></div>
+            <div class="lr-row"><dt>Recourse</dt><dd>Non-recourse preferred</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="cap-right">
+        <div class="cap-sub">
+          <div class="cap-h">Sources of Capital</div>
+          <div class="cap-scroll">
+            <table class="cap">
+              <thead><tr><th>Sources</th><th>Total</th><th>% of Total</th><th>Per Key</th></tr></thead>
+              <tbody>
+                <tr><td>Senior Debt</td><td>$19,300,000</td><td>65.0%</td><td>$119,136</td></tr>
+                <tr><td>Sponsor Equity</td><td>$10,386,000</td><td>35.0%</td><td>$64,111</td></tr>
+                <tr class="total"><td>Total Sources</td><td>$29,686,000</td><td>100.0%</td><td>$183,247</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="cap-sub">
+          <div class="cap-h">Uses of Capital</div>
+          <div class="cap-scroll">
+            <table class="cap">
+              <thead><tr><th>Uses</th><th>Total</th><th>% of Total</th><th>Per Key</th></tr></thead>
+              <tbody>
+                <tr><td>Property Acquisition</td><td>$28,000,000</td><td>94.3%</td><td>$172,840</td></tr>
+                <tr><td>Capex</td><td>$500,000</td><td>1.7%</td><td>$3,086</td></tr>
+                <tr><td>Lender &amp; Broker Fees</td><td>$386,000</td><td>1.3%</td><td>$2,383</td></tr>
+                <tr><td>Closing Costs</td><td>$800,000</td><td>2.7%</td><td>$4,938</td></tr>
+                <tr class="total"><td>Total Uses</td><td>$29,686,000</td><td>100.0%</td><td>$183,247</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOAN PERFORMANCE ============ -->
+<section class="section" id="performance" style="background:var(--ink)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Historical &amp; Projected Loan Performance</div>
+    </div>
+
+    <div class="perf-scroll reveal">
+      <table class="perf2">
+        <thead>
+          <tr class="group-row">
+            <th></th>
+            <th colspan="5">Historical</th>
+            <th colspan="5">Projected</th>
+          </tr>
+          <tr class="year-row">
+            <th></th>
+            <th>2022</th><th>2023</th><th>Renovation<br>2024</th><th>2025</th><th>May<br>2026 T-12</th>
+            <th class="forecast-start">Yr 1<br>2027</th><th>Yr 2<br>2028</th><th>Yr 3<br>2029</th><th>Yr 4<br>2030</th><th>Yr 5<br>2031</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Net Operating Income</td><td>$1,659,852</td><td>$2,318,110</td><td>$1,777,650</td><td>$2,512,720</td><td>$2,481,335</td><td class="forecast-start">$2,537,251</td><td>$2,812,262</td><td>$2,910,581</td><td>$2,996,875</td><td>$3,099,397</td></tr>
+          <tr><td>Debt Yield<sup>1</sup></td><td>8.6%</td><td>12.0%</td><td>9.2%</td><td>13.0%</td><td>12.9%</td><td class="forecast-start">13.1%</td><td>14.6%</td><td>15.1%</td><td>15.5%</td><td>16.1%</td></tr>
+          <tr><td>DSCR (I/O) at 6.25% Rate</td><td>1.38x</td><td>1.92x</td><td>1.47x</td><td>2.08x</td><td>2.06x</td><td class="forecast-start">2.10x</td><td>2.33x</td><td>2.41x</td><td>2.48x</td><td>2.57x</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="perf-note"><sup>1</sup> Calculated based on the requested loan amount of $19,300,000.</p>
+  </div>
+</section>
+
+<!-- ============ HIGHLIGHTS ============ -->
+<section class="section" id="highlights" style="background:var(--navy)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Investment Highlights</div>
+    </div>
+    <div class="hl-grid">
+      <div class="hl-card reveal"><img class="ic" src="assets/icons/performance.svg" alt=""><h3>Strong In-Place Cash Flow and Performance</h3><p>Based on the June 2026 STR, the Aloft has continued to strengthen its competitive positioning and now outperforms the competitive set across occupancy, ADR, and RevPAR. As of June 2026 TTM, the Hotel achieved occupancy, ADR, and RevPAR penetration indices of 102.0%, 101.8%, and 103.8%, respectively. May 2026 T-12 NOI of $2.48 million equates to an attractive 12.9% debt yield at 65% LTC, providing lenders with strong in-place cash flow and demonstrated operating momentum.</p></div>
+      <div class="hl-card reveal"><img class="ic" src="assets/icons/hotel.svg" alt=""><h3>Limited Change-of-Ownership PIP</h3><p>Marriott has provided the Sponsor with a new 15-year franchise agreement and is requiring only a limited change-of-ownership PIP. The scope is primarily comprised of technology upgrades, cosmetic touch-ups, furniture replacements, and routine life safety and ADA compliance items. Importantly, the PIP does not require guest room, bathroom, lobby, or major public space renovations, reflecting the $3.4 million renovation completed in 2024 and minimizing near-term capital.</p></div>
+      <div class="hl-card wide reveal"><img class="ic" src="assets/icons/location-pin.svg" alt=""><h3>Prime Downtown, Government and University Anchored Location with Diversified Demand Base</h3><div class="txt"><p>The Property is located 0.5 miles from the Florida State Capitol and the Leon County Courthouse, and within 1-2 miles of the primary campuses of Florida State University and Florida A&amp;M University. The surrounding area also includes Cascades Park, Donald L. Tucker Civic Center, a 12,500-seat arena drawing over 500,000 annual visitors, and the CollegeTown district.</p><p>The Property benefits from a diversified demand base including government, education, healthcare, corporate travel, and leisure travel. Supported by more than 63,000 government jobs across state, local, and federal agencies, and a combined university enrollment exceeding 68,000 students. Tallahassee experiences significant weekend uplift during FSU home football games, which regularly draws more than 70,000 attendees.</p><p>In 2024, Tallahassee ranked 12th nationally for overall economic performance and generated more than 18,000 new jobs over the past five years, placing it within the top 15% of U.S. metropolitan areas for job creation. Largest employers include Florida State University, the State of Florida, Tallahassee Memorial HealthCare, and Florida A&amp;M University.</p></div></div>
+      <div class="hl-card reveal"><img class="ic" src="assets/icons/handshake.svg" alt=""><h3>Strong Sponsorship</h3><p>Backed by Roch Capital, a diversified private capital manager with a real estate portfolio spanning hospitality, office, and multifamily assets, including seven hospitality properties, and the institutional capacity to evaluate, close, and execute complex acquisitions.</p></div>
+      <div class="hl-card reveal"><img class="ic" src="assets/icons/attractive-basis.svg" alt=""><h3>Attractive Basis</h3><p>The Sponsor's all-in basis of approximately $183,247 per key remains substantially below replacement cost, estimated at more than $300,000 per key for newly constructed premium select-service hotels.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="section" id="location" style="background:var(--ink)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Location</div>
+      <h2 class="h2">Tallahassee, <em>Florida</em></h2>
+    </div>
+    <div class="loc-grid" style="margin-top:34px">
+      <div class="reveal">
+        <p class="lead" style="margin-top:0">Tallahassee is a resilient and well-diversified hospitality destination anchored by government, education, research, and outdoor recreation. As Florida&rsquo;s capital and largest city in Northwest Florida, Tallahassee is home to over 200,000 residents and ranks as the ninth-largest city in the state.</p>
+        <p class="lead">Tallahassee is home to a high concentration of top-tier educational institutions, including Florida State University, Florida A&amp;M University, and Tallahassee State College (TSC), with a combined enrollment of over 68,000 students. As a result, Leon County holds the highest percentage of residents with a four-year degree in Florida at 48.6%, well above the national average of 35.0%.</p>
+        <p class="lead">The city&rsquo;s knowledge economy is further strengthened by leading research institutions such as the National High Magnetic Field Laboratory, the only facility of its kind in the U.S. As the state capital, Tallahassee also supports a large government workforce that has fueled the growth of associated industries including law, lobbying, and professional services, with prominent organizations such as the Florida Bar, Florida Chamber of Commerce, and Florida TaxWatch headquartered in the city.</p>
+      </div>
+      <div class="reveal">
+        <div class="loc-stats four">
+          <div class="ls"><div class="v">9th</div><div class="k">Largest City in Florida</div></div>
+          <div class="ls"><div class="v">68,000+</div><div class="k">Students Enrolled</div></div>
+          <div class="ls"><div class="v">48.6%</div><div class="k">Four-Year Degree Attainment</div></div>
+          <div class="ls"><div class="v">700+</div><div class="k">Miles of Trails &amp; Waterways</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loc-grid" style="margin-top:clamp(48px,7vh,80px)">
+      <div class="reveal">
+        <h3 class="h2" style="font-size:clamp(24px,2.6vw,34px)">State Capitol of <em>Florida</em></h3>
+        <p class="lead" style="margin-top:22px">The Florida State Capitol Complex is located 0.5 miles from the Hotel and encompasses the Florida Capitol, Historic Capitol, Supreme Court of Florida, and the legislative offices of the House and Senate. As Florida&rsquo;s state capital, Tallahassee is anchored by a substantial public-sector employment base. Government accounted for approximately 63,300 jobs across the Tallahassee metropolitan area in 2025, representing more than 30% of total nonfarm employment.</p>
+        <p class="lead">Tallahassee experiences a surge in demand during Florida&rsquo;s 60-day legislative session, in addition to a steady cadence of committee weeks and special sessions throughout the year. Session timing alternates by year &mdash; odd years (e.g., 2025: March through early May) run later in the spring, while even years (e.g., 2026: January through March) start earlier &mdash; with the later odd-year sessions and their additional committee weeks generating the greatest room night demand for the market.</p>
+      </div>
+      <div class="reveal">
+        <div class="cap-h">Largest Employers</div>
+        <div class="cap-scroll">
+          <table class="cap emp">
+            <thead><tr><th>Employer</th><th>Employees</th></tr></thead>
+            <tbody>
+              <tr><td>State of Florida</td><td>46,200</td></tr>
+              <tr><td>Florida State University</td><td>16,069</td></tr>
+              <tr><td>Tallahassee Memorial HealthCare</td><td>6,000</td></tr>
+              <tr><td>Leon County Schools</td><td>4,300</td></tr>
+              <tr><td>City of Tallahassee</td><td>4,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="eyebrow reveal" style="margin-top:clamp(48px,7vh,80px)">Around the Market</div>
+    <div class="market-grid blurbs reveal">
+      <figure><img src="assets/img/market/capitol.jpg" alt="Florida State Capitol"><figcaption>Florida State Capitol<span class="bl">0.5 miles from the Hotel &middot; ~63,300 government jobs across the metro area</span></figcaption></figure>
+      <figure><img src="assets/img/market/fsu.jpg" alt="Florida State University"><figcaption>Florida State University<span class="bl">1-2 miles from the Hotel &middot; 16,069 employees</span></figcaption></figure>
+      <figure><img src="assets/img/market/famu.jpg" alt="Florida A&amp;M University"><figcaption>Florida A&amp;M University<span class="bl">1-2 miles from the Hotel &middot; among the market&rsquo;s largest employers</span></figcaption></figure>
+      <figure><img src="assets/img/market/tsc.jpg" alt="Tallahassee State College"><figcaption>Tallahassee State College<span class="bl">Part of a combined university enrollment exceeding 68,000 students</span></figcaption></figure>
+      <figure><img src="assets/img/market/maglab.jpg" alt="National High Magnetic Field Laboratory"><figcaption>National MagLab<span class="bl">The only facility of its kind in the U.S.</span></figcaption></figure>
+      <figure><img src="assets/img/market/tmh.jpg" alt="Tallahassee Memorial HealthCare"><figcaption>Tallahassee Memorial HealthCare<span class="bl">6,000 employees &middot; anchors the market&rsquo;s healthcare demand</span></figcaption></figure>
+      <figure><img src="assets/img/market/cascades.jpg" alt="Cascades Park"><figcaption>Cascades Park<span class="bl">Downtown green space within 700+ miles of area trails and waterways</span></figcaption></figure>
+      <figure><img src="assets/img/market/downtown.jpg" alt="Downtown Tallahassee"><figcaption>Downtown Tallahassee<span class="bl">Florida&rsquo;s capital and ninth-largest city &middot; 200,000+ residents</span></figcaption></figure>
+      <figure><img src="assets/img/market/airport.jpg" alt="Tallahassee International Airport"><figcaption>Tallahassee International Airport<span class="bl">Commercial air service for the Tallahassee metropolitan area</span></figcaption></figure>
+    </div>
+
+    <div class="sec-head reveal" style="margin-top:clamp(48px,7vh,80px)">
+      <div class="eyebrow">Demand Generators</div>
+      <h2 class="h2">A <em>diversified</em> demand base</h2>
+    </div>
+    <div class="map-shell reveal">
+      <div class="map-box"><div id="demand-map"></div></div>
+      <div class="gen-list" id="gen-list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section cta" id="access" style="background:var(--navy)">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="justify-content:center">Confidential Financing Opportunity</div>
+    <h2 class="h2">Access the<br><em>Financing Memorandum</em></h2>
+    <p>To receive the full Financing Memorandum and access data-room materials, please execute the Confidentiality Agreement or contact the Hodges Ward Elliott Debt &amp; Structured Finance team.</p>
+    <div class="btnrow">
+      <!-- TODO: replace "#" with the RightSignature template-signer link for Aloft Tallahassee Downtown -->
+      <a class="btn btn-cta" href="#">Sign Confidentiality Agreement</a>
+      <!-- TODO: drop the NDA .docx into assets/ and point href at it, e.g. assets/NDA-Aloft-Tallahassee-Downtown-Financing.docx (add download="…") -->
+      <a class="btn btn-ghost" href="#">Download Confidentiality Agreement</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="fgrid">
+    <div class="flogo">
+      <img src="assets/logo/hwe-white.svg" alt="Hodges Ward Elliott">
+    </div>
+    <div>
+      <div class="fhead">Exclusive Financing Advisor</div>
+      <div class="contacts">
+        <div class="contact"><div class="nm">Michael Britvan</div><div class="ti">Managing Director</div><a class="ph" href="tel:+16465533639">(646) 553-3639</a><a class="em" href="mailto:mbritvan@hodgeswardelliott.com">mbritvan@hodgeswardelliott.com</a></div>
+        <div class="contact"><div class="nm">Preston Reid</div><div class="ti">Executive Managing Director</div><a class="ph" href="tel:+18133631754">(813) 363-1754</a><a class="em" href="mailto:preid@hodgeswardelliott.com">preid@hodgeswardelliott.com</a></div>
+        <div class="contact"><div class="nm">Celina Nowicki</div><div class="ti">Associate</div><a class="ph" href="tel:+14193452375">(419) 345-2375</a><a class="em" href="mailto:cnowicki@hodgeswardelliott.com">cnowicki@hodgeswardelliott.com</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="fnote">
+    <p>This is a confidential Financing Memorandum prepared by Hodges Ward Elliott (“HWE”) solely for use by prospective lenders in evaluating a financing of the Aloft Tallahassee Downtown. It does not constitute an offer to sell or a solicitation of an offer to buy any security or financial instrument. The information contained herein has been obtained from sources believed to be reliable; however, HWE makes no representation or warranty, express or implied, as to its accuracy or completeness. Projections are illustrative, based on assumptions that are subject to change, and are not a guarantee of future performance.</p>
+    <div class="fbar">
+      <span>© 2026 Hodges Ward Elliott. All rights reserved.</span>
+      <span>Aloft Tallahassee Downtown · 200 North Monroe Street, Tallahassee, FL 32301</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Map -->
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script>
+  var HOTEL = { name:"Aloft Tallahassee Downtown", lat:30.4426, lng:-84.2812 };
+  var GENERATORS = [
+    { name:"Florida State Capitol Complex", lat:30.4383, lng:-84.2812, note:"0.5 mi · Capitol, Supreme Court & legislative offices" },
+    { name:"Leon County Courthouse", lat:30.4397, lng:-84.2812, note:"0.5 mi · County seat & civil courts" },
+    { name:"Florida State University", lat:30.4419, lng:-84.2985, note:"1–2 mi · 16,069 employees" },
+    { name:"Florida A&M University", lat:30.4232, lng:-84.2871, note:"1–2 mi · Primary campus" },
+    { name:"CollegeTown District", lat:30.4390, lng:-84.2955, note:"Retail, dining & nightlife district" },
+    { name:"Donald L. Tucker Civic Center", lat:30.4384, lng:-84.2933, note:"12,500 seats · 500,000+ annual visitors" },
+    { name:"Doak Campbell Stadium", lat:30.4380, lng:-84.3046, note:"FSU home football · 70,000+ attendees" },
+    { name:"Cascades Park", lat:30.4344, lng:-84.2762, note:"Downtown park & amphitheater" },
+    { name:"Tallahassee Memorial HealthCare", lat:30.4527, lng:-84.2613, note:"6,000 employees" },
+    { name:"Tallahassee State College", lat:30.4436, lng:-84.3437, note:"Third of the market's major campuses" },
+    { name:"National High Magnetic Field Laboratory", lat:30.4243, lng:-84.3457, note:"The only facility of its kind in the U.S." },
+    { name:"Tallahassee International Airport", lat:30.3965, lng:-84.3503, note:"Commercial air service for the metro area" }
+  ];
+
+  // Build generator list
+  var listEl = document.getElementById("gen-list");
+  var rows = [];
+  GENERATORS.forEach(function(g,i){
+    var row = document.createElement("div");
+    row.className = "gen-row";
+    row.innerHTML = '<span class="num">'+(i+1)+'</span><span><span class="nm">'+g.name+'</span><div class="nt">'+g.note+'</div></span>';
+    row.addEventListener("click", function(){ if(window.__select) window.__select(i); });
+    listEl.appendChild(row);
+    rows.push(row);
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var el = document.getElementById("demand-map");
+    if (!el || typeof maplibregl === "undefined") return;
+
+    var overview = new maplibregl.LngLatBounds();
+    GENERATORS.forEach(function(g){ overview.extend([g.lng, g.lat]); });
+    overview.extend([HOTEL.lng, HOTEL.lat]);
+
+    var map = new maplibregl.Map({
+      container: el,
+      style: "https://tiles.openfreemap.org/styles/positron",
+      bounds: overview,
+      fitBoundsOptions: { padding: 46 }
+    });
+    map.scrollZoom.disable();
+    map.addControl(new maplibregl.NavigationControl({ showCompass:false }), "top-left");
+
+    function makePin(color, inner, cls){
+      var wrap = document.createElement("div");
+      wrap.className = cls || "genpin";
+      var dot = document.createElement("div");
+      dot.className = "pin-dot";
+      dot.style.background = color;
+      dot.innerHTML = inner;
+      wrap.appendChild(dot);
+      return wrap;
+    }
+
+    // Subject hotel (always pulsing) — auto popup on click
+    new maplibregl.Marker({ element: makePin("var(--gold)", "✦", "genpin hotelpin active") })
+      .setLngLat([HOTEL.lng, HOTEL.lat])
+      .setPopup(new maplibregl.Popup({ offset:18, closeButton:false }).setHTML("<b>"+HOTEL.name+"</b>"))
+      .addTo(map);
+
+    // Demand-generator markers + manually-managed popups
+    var markers = [], popups = [];
+    GENERATORS.forEach(function(g,i){
+      var m = new maplibregl.Marker({ element: makePin("#3a3a34", String(i+1), "genpin") })
+        .setLngLat([g.lng, g.lat]).addTo(map);
+      m.getElement().addEventListener("click", function(){ window.__select(i); });
+      markers.push(m);
+      popups.push(new maplibregl.Popup({ offset:18, closeButton:false, closeOnClick:false })
+        .setLngLat([g.lng, g.lat]).setHTML("<b>"+g.name+"</b><br>"+g.note));
+    });
+
+    window.__select = function(i){
+      var g = GENERATORS[i];
+      markers.forEach(function(m,k){ m.getElement().classList.toggle("active", k===i); });
+      popups.forEach(function(p,k){ if (k===i){ if(!p.isOpen()) p.addTo(map); } else if (p.isOpen()) p.remove(); });
+      rows.forEach(function(r,k){ r.classList.toggle("active", k===i); });
+      map.flyTo({ center:[g.lng, g.lat], zoom:14, duration:800 });
+    };
+
+    // Zoom back out to the full overview when the mouse leaves the map/table area
+    var shell = document.querySelector(".map-shell");
+    if (shell) shell.addEventListener("mouseleave", function(){
+      markers.forEach(function(m){ m.getElement().classList.remove("active"); });
+      popups.forEach(function(p){ if (p.isOpen()) p.remove(); });
+      rows.forEach(function(r){ r.classList.remove("active"); });
+      map.fitBounds(overview, { padding:46, duration:700 });
+    });
+  });
+
+  // Nav: hamburger dropdown + hide-on-scroll
+  var nav = document.getElementById("nav");
+  var navToggle = document.getElementById("navToggle");
+  var navMenu = document.getElementById("navMenu");
+  function closeMenu(){ navToggle.classList.remove("open"); navMenu.classList.remove("open"); navToggle.setAttribute("aria-expanded","false"); }
+  navToggle.addEventListener("click", function(e){
+    e.stopPropagation();
+    var open = navMenu.classList.toggle("open");
+    navToggle.classList.toggle("open", open);
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  navMenu.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", closeMenu); });
+  document.addEventListener("click", function(e){
+    if (navMenu.classList.contains("open") && !navMenu.contains(e.target) && e.target !== navToggle) closeMenu();
+  });
+  // Nav: solidify + hide when scrolling down, reveal when scrolling up
+  var lastY = window.scrollY;
+  window.addEventListener("scroll", function(){
+    var y = window.scrollY;
+    nav.classList.toggle("scrolled", y > 40);
+    if (y > lastY && y > 200){ nav.classList.add("nav--hidden"); closeMenu(); }
+    else { nav.classList.remove("nav--hidden"); }
+    lastY = y;
+  }, { passive:true });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} });
+  }, { threshold:.12 });
+  document.querySelectorAll(".reveal").forEach(function(n){ io.observe(n); });
+
+  // Bar-chart animation: drop+grow (with value fade/slide), finishing even if the mouse leaves
+  var chartBars = Array.prototype.slice.call(document.querySelectorAll(".chart .bars .bar"));
+  function triggerBar(i){
+    var bar = chartBars[i];
+    if (!bar) return;
+    bar.classList.remove("grow");
+    void bar.offsetWidth;            // reflow so the animation can restart
+    bar.classList.add("grow");
+  }
+  chartBars.forEach(function(bar,i){
+    var col = bar.querySelector(".col");
+    if (col) col.addEventListener("animationend", function(){ bar.classList.remove("grow"); });
+    bar.addEventListener("mouseenter", function(){ triggerBar(i); });
+  });
+  // Link the performance table's year columns to the matching bar
+  document.querySelectorAll("table.perf2 .year-row th").forEach(function(th, idx){
+    if (idx === 0) return;           // first cell is the empty metric header
+    var barIndex = idx - 1;
+    th.addEventListener("mouseenter", function(){ triggerBar(barIndex); });
+    th.addEventListener("click", function(){ triggerBar(barIndex); });
+  });
+</script>
+</body>
+</html>
