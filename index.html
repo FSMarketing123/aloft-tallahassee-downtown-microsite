@@ -471,12 +471,6 @@
   .snap-card{display:flex;flex-direction:column}
   .snap-card .k{margin-top:auto;padding-top:9px}
 
-  /* Location: four stat tiles instead of six */
-  .loc-stats.four{grid-template-columns:repeat(2,1fr)}
-
-  /* Largest Employers: two-column table */
-  table.cap.emp th:first-child{width:72%}
-
   /* Market grid: captions carry a short blurb */
   .market-grid.blurbs{grid-template-columns:repeat(3,1fr)}
   .market-grid.blurbs figcaption{padding:40px 16px 15px;
@@ -698,50 +692,7 @@
 <!-- ============ LOCATION ============ -->
 <section class="section" id="location" style="background:var(--ink)">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Location</div>
-      <h2 class="h2">Tallahassee, <em>Florida</em></h2>
-    </div>
-    <div class="loc-grid" style="margin-top:34px">
-      <div class="reveal">
-        <p class="lead" style="margin-top:0">Tallahassee is a resilient and well-diversified hospitality destination anchored by government, education, research, and outdoor recreation. As Florida&rsquo;s capital and largest city in Northwest Florida, Tallahassee is home to over 200,000 residents and ranks as the ninth-largest city in the state.</p>
-        <p class="lead">Tallahassee is home to a high concentration of top-tier educational institutions, including Florida State University, Florida A&amp;M University, and Tallahassee State College (TSC), with a combined enrollment of over 68,000 students. As a result, Leon County holds the highest percentage of residents with a four-year degree in Florida at 48.6%, well above the national average of 35.0%.</p>
-        <p class="lead">The city&rsquo;s knowledge economy is further strengthened by leading research institutions such as the National High Magnetic Field Laboratory, the only facility of its kind in the U.S. As the state capital, Tallahassee also supports a large government workforce that has fueled the growth of associated industries including law, lobbying, and professional services, with prominent organizations such as the Florida Bar, Florida Chamber of Commerce, and Florida TaxWatch headquartered in the city.</p>
-      </div>
-      <div class="reveal">
-        <div class="loc-stats four">
-          <div class="ls"><div class="v">9th</div><div class="k">Largest City in Florida</div></div>
-          <div class="ls"><div class="v">68,000+</div><div class="k">Students Enrolled</div></div>
-          <div class="ls"><div class="v">48.6%</div><div class="k">Four-Year Degree Attainment</div></div>
-          <div class="ls"><div class="v">700+</div><div class="k">Miles of Trails &amp; Waterways</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="loc-grid" style="margin-top:clamp(48px,7vh,80px)">
-      <div class="reveal">
-        <h3 class="h2" style="font-size:clamp(24px,2.6vw,34px)">State Capitol of <em>Florida</em></h3>
-        <p class="lead" style="margin-top:22px">The Florida State Capitol Complex is located 0.5 miles from the Hotel and encompasses the Florida Capitol, Historic Capitol, Supreme Court of Florida, and the legislative offices of the House and Senate. As Florida&rsquo;s state capital, Tallahassee is anchored by a substantial public-sector employment base. Government accounted for approximately 63,300 jobs across the Tallahassee metropolitan area in 2025, representing more than 30% of total nonfarm employment.</p>
-        <p class="lead">Tallahassee experiences a surge in demand during Florida&rsquo;s 60-day legislative session, in addition to a steady cadence of committee weeks and special sessions throughout the year. Session timing alternates by year &mdash; odd years (e.g., 2025: March through early May) run later in the spring, while even years (e.g., 2026: January through March) start earlier &mdash; with the later odd-year sessions and their additional committee weeks generating the greatest room night demand for the market.</p>
-      </div>
-      <div class="reveal">
-        <div class="cap-h">Largest Employers</div>
-        <div class="cap-scroll">
-          <table class="cap emp">
-            <thead><tr><th>Employer</th><th>Employees</th></tr></thead>
-            <tbody>
-              <tr><td>State of Florida</td><td>46,200</td></tr>
-              <tr><td>Florida State University</td><td>16,069</td></tr>
-              <tr><td>Tallahassee Memorial HealthCare</td><td>6,000</td></tr>
-              <tr><td>Leon County Schools</td><td>4,300</td></tr>
-              <tr><td>City of Tallahassee</td><td>4,000</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div class="eyebrow reveal" style="margin-top:clamp(48px,7vh,80px)">Around the Market</div>
+    <div class="eyebrow reveal">Around the Market</div>
     <div class="market-grid blurbs reveal">
       <figure><img src="assets/img/market/capitol.jpg" alt="Florida State Capitol"><figcaption>Florida State Capitol<span class="bl">0.5 miles from the Hotel &middot; ~63,300 government jobs across the metro area</span></figcaption></figure>
       <figure><img src="assets/img/market/fsu.jpg" alt="Florida State University"><figcaption>Florida State University<span class="bl">1-2 miles from the Hotel &middot; 16,069 employees</span></figcaption></figure>
